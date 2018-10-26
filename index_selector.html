@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../Jquery/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).hide();
+            });
+            $("#show").click(function () {
+                $(" ul, li").show();
+            });
+            $("button").click(function () {
+                $("section >*").show();
+            });
+            $("#first").click(function () {
+                $("ul li:first").hide();
+            });
+            $("#first-child").click(function () {
+                $("ul li:first-child").hide();
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <section>
+        <p>If you click on me, I will disappear.</p>
+        <p>Click me away!</p>
+        <p>Click me too!</p>
+        <p class="hide">Show after button click</p>
+    </section>
+    <p>List 1:</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+    <p>List 2:</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+    <input type="button" value="Show" id="show">
+    <button>Show all paragraph</button>
+    <button id="first">Hide first</button>
+    <button id="first-child">Hide first-child</button>
+</body>
+
+</html>
